@@ -191,7 +191,7 @@ defmodule Plug.Cowboy do
 
   ## Helpers
 
-  @protocol_options [:compress, :stream_handlers]
+  @protocol_options [:compress, :stream_handlers, :metrics_callback]
 
   defp run(scheme, plug, opts, cowboy_options) do
     case Application.ensure_all_started(:cowboy) do
